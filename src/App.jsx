@@ -1,5 +1,6 @@
 import Sidebar from "./components/Sidebar.jsx";
 import ViewProject from "./components/ViewProject.jsx";
+import NoProjectSelected from "./components/NoProjectSelected.jsx";
 import BookImage from "./assets/no-projects.png";
 import PROJECTS_DATA from "./ProjectData.js";
 import CreateProject from "./components/CreateProject.jsx";
@@ -89,21 +90,7 @@ function App() {
         />
       ) : null}
       {!selectedProject && !showAddProject && (
-        <div className="flex flex-col justify-center items-center gap-y-3 w-full">
-          <img src={BookImage} alt="No projects" className="w-15 h-15" />
-          <p className="text-2xl font-bold text-stone-600">
-            No Project Selected
-          </p>
-          <small className="text-stone-400 text-lg">
-            Select a project or get started with a new one
-          </small>
-          <button
-            className="mt-4 bg-stone-900 text-stone-500 py-2 px-3 rounded-sm cursor-pointer"
-            onClick={handleAddProject}
-          >
-            Create new project
-          </button>
-        </div>
+        <NoProjectSelected onAddProject={handleAddProject} />
       )}
       {!isEmpty && !!selectedProject && !showAddProject && (
         <ViewProject
