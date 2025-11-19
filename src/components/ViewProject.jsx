@@ -32,7 +32,7 @@ export default function Project({
           Delete
         </button>
       </div>
-      <small className="text-stone-500 mb-4 text-[16px]">{formmatedDate}</small>
+      <small className="text-stone-500 mb-4 text-base">{formmatedDate}</small>
       <p className="pb-2 border-b-3 border-stone-300">
         <h3 className="w-1/2 leading-12">{project.description}</h3>
       </p>
