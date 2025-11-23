@@ -1,7 +1,6 @@
 import Sidebar from "./components/Sidebar.jsx";
 import ViewProject from "./components/ViewProject.jsx";
 import NoProjectSelected from "./components/NoProjectSelected.jsx";
-import BookImage from "./assets/no-projects.png";
 import PROJECTS_DATA from "./ProjectData.js";
 import CreateProject from "./components/CreateProject.jsx";
 import { v4 as uuidv4 } from "uuid";
@@ -11,7 +10,7 @@ import "./App.css";
 function App() {
   const [projects, setProjects] = useState(PROJECTS_DATA);
   const [showAddProject, setShowAddProject] = useState(false);
-  const [selectedProjectId, setSelectedProjectId] = useState(null);
+  const [selectedProjectId, setSelectedProjectId] = useState(undefined);
 
   const isEmpty = projects.length === 0;
 

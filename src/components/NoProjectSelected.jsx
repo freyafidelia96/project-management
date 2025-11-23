@@ -1,3 +1,5 @@
+import BookImage from "../assets/no-projects.png";
+
 export default function NoProjectSelected({ onAddProject }) {
   return (
     <div className="flex flex-col justify-center items-center gap-y-3 w-full">
